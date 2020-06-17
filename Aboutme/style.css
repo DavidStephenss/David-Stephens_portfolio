@@ -1,0 +1,73 @@
+.grid-container{
+    display: grid; 
+    grid-template-rows: 1fr 2fr;
+    /* grid-template-areas: "head head head"
+                        "list-one art list-two"; */
+     /* background-image: url"background-aboutme.jpeg"; */
+    
+}
+
+body{ 
+    display: grid;
+    background-image: url("background.jpeg"), url("background");
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url"background-aboutme.jpeg";
+    */ }
+/* img{
+    background-image: url"background-aboutme.jpeg";
+} */
+.head{
+    text-align: center;
+    grid-area: head;
+    color: #629CA6;
+    
+}
+
+.back{
+    background-image: url("background.jpeg"), url("background");
+    background-size: auto;
+
+}
+/* .back{
+    width:600px;
+} */
+
+h2{
+    color: #629CA6;
+}
+.sec-one{
+    grid-area: list-one;
+    color: #E3B750;
+}
+
+.sec-two{
+    grid-area: art;
+    color: #4768A5;
+}
+
+.sec-three{
+    grid-area: list-two;
+    color: #DB5D5A;
+}
+
+@media (max-width: 992px) {
+  .grid-one{  
+      display: grid;
+    grid-template-areas:
+                "head head head"
+              "sec-one sec-two sec-three";
+  }  
+
+  @media (max-width: 576px) {
+    .grid-one{
+        display: grid;
+    grid-template-areas: 
+                        "head"    
+                         "sec-one"
+                        "sec-two"   
+                        "sec-three";
+    }

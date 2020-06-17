@@ -1,10 +1,9 @@
 body {
-    Background: url (grandcanyon pic for website.jpg) 
+  background-image: url("grandcanyon\ pic\ for\ website.jpg"), url("grandcanyon");
     font-family: Arial, Helvetica, sans-serif;
-    background-color:
     background-repeat: no-repeat;
-    background-size:  1600px 1000px;
-    width: 100vw;
+    /* background-size:  500px 500px; */
+    width: 50vw;
     height: 100vh;
   }
   /* What kind of selector is this? */
@@ -56,9 +55,9 @@ body {
     padding-right: 2%;
   }
   /* This is an ID selector */
-  #profile-pic {
-    width: 400px;
-    height: 400px;
+  .pic {
+    width: 100px;
+    height: 50x;
     border-radius: 50%;
     margin: 15% auto;
     grid-column: 2/3;
@@ -99,5 +98,4 @@ body {
     color: white;
     letter-spacing: 16px;
     font-style: italic;
-  }
-  <body style = background: url 
+  } 
