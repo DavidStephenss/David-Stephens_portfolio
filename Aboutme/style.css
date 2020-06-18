@@ -1,56 +1,42 @@
 .grid-container{
     display: grid; 
     grid-template-rows: 1fr 2fr;
-    /* grid-template-areas: "head head head"
-                        "list-one art list-two"; */
-     /* background-image: url"background-aboutme.jpeg"; */
     
 }
 
 body{ 
     display: grid;
-    background-image: url("background.jpeg"), url("background");
+    background-image: url("background.jpeg");
     background-color: #cccccc;
     background-repeat: no-repeat;
     opacity: 0.9;
     width: 100vw;
     height: 100vh;
-    /* background-image: url"background-aboutme.jpeg";
-    */ }
-/* img{
-    background-image: url"background-aboutme.jpeg";
-} */
-.head{
+    background-size: cover;
+     }
+
+header{
     text-align: center;
-    grid-area: head;
+    grid-area: header;
     color: #629CA6;
-    
-}
+    }
 
-.back{
-    background-image: url("background.jpeg"), url("background");
-    background-size: auto;
-
-}
-/* .back{
-    width:600px;
-} */
 
 h2{
     color: #629CA6;
 }
 .sec-one{
-    grid-area: list-one;
+    grid-area: sec-one;
     color: #E3B750;
 }
 
 .sec-two{
-    grid-area: art;
+    grid-area: sec-two;
     color: #4768A5;
 }
 
 .sec-three{
-    grid-area: list-two;
+    grid-area: sec-three;
     color: #DB5D5A;
 }
 
@@ -58,16 +44,18 @@ h2{
   .grid-one{  
       display: grid;
     grid-template-areas:
-                "head head head"
+                "header header header"
               "sec-one sec-two sec-three";
   }  
+}
 
   @media (max-width: 576px) {
     .grid-one{
         display: grid;
     grid-template-areas: 
-                        "head"    
+                        "header"    
                          "sec-one"
                         "sec-two"   
                         "sec-three";
     }
+}
