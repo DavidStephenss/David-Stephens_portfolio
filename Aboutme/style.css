@@ -1,25 +1,44 @@
 .grid-container{
     display: grid; 
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 
+                    " header header header"
+                    "sec-one art sec-three"
+                    "sec-one art sec-three";
     
 }
 
 body{ 
     display: grid;
-    background-image: url("background.jpeg");
+    background-image: url("/image-gallery-page/images/flagpeaks.jpeg");
     background-color: #cccccc;
     background-repeat: no-repeat;
     opacity: 0.9;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     background-size: cover;
+    font-family: 'Playfair Display', serif;
+ 
+    
      }
 
-header{
+.header {
     text-align: center;
     grid-area: header;
-    color: #629CA6;
+    color: #407AB5;
     }
+
+.navbar > a {
+    color:white;
+    justify-content: space-evenly;
+
+}
+
+h1{
+    text-align: center;
+    color: #2D3460;
+}
 
 
 h2{
@@ -27,35 +46,55 @@ h2{
 }
 .sec-one{
     grid-area: sec-one;
-    color: #E3B750;
+    color: white;
 }
 
-.sec-two{
-    grid-area: sec-two;
-    color: #4768A5;
+.art {
+    grid-area: art;
+    color: white;
+}
+
+p{
+    color: white;
 }
 
 .sec-three{
     grid-area: sec-three;
-    color: #DB5D5A;
+    color: white;
 }
 
-@media (max-width: 992px) {
+/* .navbar a:hover, a:active {
+        color: #0BA39C;
+ }  */
+ 
+.navbar {
+   color: white;
+}
+
+@media (max-width: 900px) {
   .grid-one{  
-      display: grid;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
                 "header header header"
-              "sec-one sec-two sec-three";
+              "sec-one art sec-three";
   }  
 }
 
-  @media (max-width: 576px) {
+  @media (max-width: 600px) {
+      body{ 
+        background-image: url("/image-gallery-page/images/trees.jpeg");
+        background-size: cover;
+      }
     .grid-one{
-        display: grid;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr 1fr 1fr;
     grid-template-areas: 
                         "header"    
                          "sec-one"
-                        "sec-two"   
+                        "art"   
                         "sec-three";
     }
 }
