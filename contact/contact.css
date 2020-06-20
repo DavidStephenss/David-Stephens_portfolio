@@ -1,0 +1,58 @@
+body{
+    display: grid;
+    background-image: url("/image-gallery-page/images/arizonamtn.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "header header header"
+                            ".info."
+                            ".info."
+                           
+}
+
+header{
+    grid-area: header;
+}
+
+
+.info{
+    grid-area: info;
+    font-family: 'Playfair Display', serif;
+}
+
+nav> a {
+    color: black;
+}
+
+h1{
+    text-align: center;
+}
+
+nav{
+    text-align: center;
+}
+
+label{
+    font-size: 20px;
+
+}
+
+@media (max-width: 900px){
+
+}
+
+@media (max-width: 600px) {
+    body{
+        background-image: url("/image-gallery-page/images/cactus.jpeg");
+    }
+
+    .info{
+        color: #B95940;
+    }
+
+    h1{
+        color: #2C6E80
+    }
+
+}
